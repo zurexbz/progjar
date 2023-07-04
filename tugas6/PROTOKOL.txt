@@ -1,0 +1,48 @@
+1. Registrasi:
+Command: register <username> <name> <password>
+Deskripsi: Registrasi user berdasarkan username, nama, dan password yang diberikan
+Respon:
+- Jika berhasil, maka akan mengembalikan respon berhasil dan data user akan ditambahkan ke server
+- Jika tidak berhasil, maka akan diberikan respon kesalahan
+
+2. Autentikasi:
+Command: login <username> <password>
+Deskripsi: Autentikasi user berdasarkan username dan password yang diberikan
+Respon:
+- Jika berhasil, maka akan diberikan token yang berfungsi untuk menyimpan sesi user dan respon berhasil
+- Jika tidak berhasil, maka akan diberikan respon kesalahan 
+
+3. Logout:
+Command: logout
+Deskripsi: Logout akun user yang sedang login dengan menghapus token yang telah didapatkan sebelumnya
+Respon:
+- Jika berhasil, maka token yang disimpan akan dihapus dan mengembalikan respon berhasil
+- Jika tidak berhasil, maka akan diberikan respon kesalahan
+
+4. Private Chat Lokal / Multirealm:
+Command: send <username>@<server_id> <message>
+Deskripsi: Pengiriman pesan kepada user yang diinginkan
+Respon:
+- Jika berhasil, maka message akan dikirimkan kepada user dan mengembalikan respon berhasil
+- Jika tidak berhasil, maka akan diberikan respon kesalahan
+
+5. Group Chat Lokal / Multirealm + Create Group
+Command: sendgroup <group_id> <message> / membuat grup
+Deskripsi: Pengiriman pesan kepada anggota grup tertentu
+Respon:
+- Jika berhasil, maka message akan dikirimkan kepada semua anggota grup dan mengembalikan respon berhasil
+- Jika tidak berhasil, maka akan diberikan respon kesalahan
+
+6. File Private Send Lokal / Multirealm
+Command: sendfile <username>@<server_id> <filename>
+Deskripsi: Pengiriman file kepada user yang diinginkan
+Respon:
+- Jika berhasil, maka file akan dikirimkan kepada user yang diinginkan dan mengembalikan respon berhasil
+- Jika tidak berhasil, maka akan diberikan respon kesalahan
+
+7. File Group Send Lokal / Multirealm
+Command: sendfilegroupserver <group_id> <server_id> <filename>
+Deskripsi: Pengiriman file kepada setiap anggota grup yang diinginkan
+Respon:
+- Jika berhasil, maka file akan dikirimkan kepada semua anggota grup dan mengembalikan respon berhasil
+- Jika tidak berhasil, maka akan diberikan respon kesalahan
